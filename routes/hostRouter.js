@@ -5,6 +5,10 @@ const hostRouter = express.Router();
 
 
 const rootDir = require("../utils/pathUtil");
+hostRouter.get("/host/sgpa-calculator", (req,res) => {
+  res.render('sgpa-calculator',{pageTitle: 'calculator'});
+});
+
 
 hostRouter.get("/host/syllabus", (req,res,next) => {
   res.render('addHome',{pageTitle: 'Add Home to airbnb'});

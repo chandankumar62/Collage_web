@@ -1,0 +1,158 @@
+<%- include('partial/head') %>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f4f6;
+            margin: 0;
+            padding: 30px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background: #ef4444;
+            color: white;
+        }
+        input {
+            width: 90%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #ef4444;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #dc2626;
+        }
+        #result {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+<%- include('partial/header') %>
+<div class="container">
+    <h1>SGPA Calculator</h1>
+    <table>
+        <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Credits</th>
+              <th>Grade Point</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Subject 1</td>
+                <td>
+                    <input type="number" class="credit">
+                </td>
+                <td>
+                    <input type="number" class="grade">
+                </td>
+            </tr>
+            <tr>
+                <td>Subject 2</td>
+                <td>
+                    <input type="number" class="credit">
+                </td>
+                <td>
+                    <input type="number" class="grade">
+                </td>
+            </tr>
+            <tr>
+                <td>Subject 3</td>
+                <td>
+                    <input type="number" class="credit">
+                </td>
+                <td>
+                    <input type="number" class="grade">
+                </td>
+            </tr>
+            <tr>
+                <td>Subject 4</td>
+                <td>
+                    <input type="number" class="credit">
+                </td>
+                <td>
+                    <input type="number" class="grade">
+                </td>
+            </tr>
+            <tr>
+                <td>Subject 5</td>
+                <td>
+                    <input type="number" class="credit">
+                </td>
+                <td>
+                    <input type="number" class="grade">
+                </td>
+            </tr>
+            <tr>
+                <td>Subject 6</td>
+                <td>
+                    <input type="number" class="credit">
+                </td>
+                <td>
+                    <input type="number" class="grade">
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <button onclick="calculateSGPA()">Calculate SGPA</button>
+    <div id="result"></div>
+</div>
+<script>
+function calculateSGPA() {
+    let credits = document.querySelectorAll(".credit");
+    let grades = document.querySelectorAll(".grade");
+    let totalCredits = 0;
+    let totalPoints = 0;
+    for(let i = 0; i < credits.length; i++) {
+        let credit = Number(credits[i].value);
+        let grade = Number(grades[i].value);
+        if(credit > 0 && grade >= 0) {
+            totalCredits += credit;
+            totalPoints += credit * grade;
+        }
+    }
+    if(totalCredits === 0) {
+        document.getElementById("result").innerHTML =
+            "Please enter credits and grade points.";
+        return;
+    }
+    let sgpa = totalPoints / totalCredits;
+    document.getElementById("result").innerHTML =
+        "Your SGPA = " + sgpa.toFixed(2);
+}
+</script>
+</body>
+</html>
