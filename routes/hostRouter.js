@@ -8,6 +8,9 @@ const rootDir = require("../utils/pathUtil");
 hostRouter.get("/host/sgpa-calculator", (req,res) => {
   res.render('sgpa-calculator',{pageTitle: 'calculator'});
 });
+hostRouter.get("/host/calendar", (req,res) => {
+  res.render('calendar',{pageTitle: 'calendar'});
+});
 
 
 hostRouter.get("/host/syllabus", (req,res,next) => {
