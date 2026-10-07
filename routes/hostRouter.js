@@ -11,6 +11,9 @@ hostRouter.get("/host/sgpa-calculator", (req,res) => {
 hostRouter.get("/host/calendar", (req,res) => {
   res.render('calendar',{pageTitle: 'calendar'});
 });
+hostRouter.get("/cricket", (req,res) => {
+  res.render('cricket',{pageTitle: 'cricket'});
+});
 
 
 hostRouter.get("/host/syllabus", (req,res,next) => {
