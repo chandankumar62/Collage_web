@@ -14,6 +14,9 @@ hostRouter.get("/host/calendar", (req,res) => {
 hostRouter.get("/cricket", (req,res) => {
   res.render('cricket',{pageTitle: 'cricket'});
 });
+hostRouter.get("/badminton", (req,res) => {
+  res.render('badminton',{pageTitle: 'badminton'});
+});
 
 
 hostRouter.get("/host/syllabus", (req,res,next) => {
