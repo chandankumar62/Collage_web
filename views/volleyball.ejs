@@ -1,0 +1,303 @@
+<%- include('partial/head') %>
+<style>
+.container2 {
+    max-width: 750px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+.header2 {
+    text-align: center;
+    padding: 35px 20px;
+    color: white;
+    background: linear-gradient(135deg, #ff6b35, #ff9f1c);
+}
+.volleyball {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+.header h1 {
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+.header h2 {
+    font-size: 22px;
+    margin: 8px 0;
+}
+.header p {
+    margin-top: 12px;
+    font-size: 14px;
+}
+form {
+    padding: 30px;
+}
+form h3 {
+    color: #126e82;
+    margin: 10px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff9f1c;
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #263238;
+    margin-bottom: 8px;
+}
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd5df;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    font-family: inherit;
+    transition: 0.3s;
+}
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #126e82;
+    box-shadow: 0 0 0 3px rgba(18, 110, 130, 0.12);
+}
+textarea {
+    resize: vertical;
+}
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 10px 0 25px;
+}
+.checkbox input {
+    width: auto;
+    margin-top: 2px;
+}
+.checkbox label {
+    font-weight: normal;
+    line-height: 1.5;
+}
+button {
+    width: 100%;
+    padding: 14px;
+    background: #ff6b35;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background: #e85520;
+    transform: translateY(-2px);
+}
+.reset-btn {
+    margin-top: 12px;
+    background: #126e82;
+}
+.reset-btn:hover {
+    background: #0b5262;
+}
+#successMessage {
+    margin-top: 20px;
+    text-align: center;
+    color: #13803d;
+    font-weight: bold;
+    line-height: 1.6;
+}
+footer {
+    background: #071b33;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    line-height: 1.8;
+}
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    form {
+        padding: 22px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .header h2 {
+        font-size: 19px;
+    }
+}
+</style>
+</head>
+<body>
+  <header class="bg-red-500 text-white p-4 shadow-md">
+    <nav class="container mx-auto flex justify-between items-center">
+      <ul class="flex space-x-4"> 
+        <li>
+          <a href="/sports-home" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Home</a>
+        </li>
+        <li>
+          <a href="/cricket"><h2 class="Logo">Cricket</h2></a>
+        </li>
+        <li>
+          <a href="/badminton" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Badminton</a>
+        </li>
+        <li>
+          <a href="/volleyball" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Volleyball</a>
+        </li>
+        <li>
+          <a href="/chess" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Chess</a>
+        </li>
+        <li>
+          <a href="/tug-of-war" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Tug of War</a>
+        </li>
+        <li>
+          <a href="/carrom" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Carrom</a>
+        </li>
+        <li>
+          <a href="/kabbadi" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Kabbadi</a>
+        </li>
+        <li>
+          <a href="/pubge" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Pubg</a>
+        </li>
+        <li>
+          <a href="/free-fire" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Free fire</a>
+        </li>
+        <li>
+          <a href="/long-jump" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Long jump</a>
+        </li>
+        <li>
+          <a href="/high-jump" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">High jump</a>
+        </li>
+        <li>
+          <a href="/high-jump" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Jablin Throw</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+    <div class="container2">
+        <div class="header2">
+            <div class="volleyball">🏐</div>
+            <h1>VOLLEYBALL</h1>
+            <h2>TOURNAMENT 2026</h2>
+            <p>Register your team and get ready to play!</p>
+        </div>
+        <form id="registrationForm">
+            <h3>Player Information</h3>
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name"
+                           placeholder="Enter your full name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email"
+                           placeholder="Enter your email" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone"
+                           placeholder="10-digit mobile number"
+                           pattern="[0-9]{10}" required>
+                </div>
+                <div class="input-group">
+                    <label for="age">Age *</label>
+                    <input type="number" id="age"
+                           min="13" max="100"
+                           placeholder="Enter your age" required>
+                </div>
+            </div>
+            <h3>Team Information</h3>
+            <div class="input-group">
+                <label for="team">Team Name *</label>
+                <input type="text" id="team"
+                       placeholder="Enter your team name" required>
+            </div>
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="position">Playing Position *</label>
+                    <select id="position" required>
+                        <option value="">Select Position</option>
+                        <option value="Setter">Setter</option>
+                        <option value="Outside Hitter">Outside Hitter</option>
+                        <option value="Middle Blocker">Middle Blocker</option>
+                        <option value="Opposite Hitter">Opposite Hitter</option>
+                        <option value="Libero">Libero</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="experience">Playing Experience</label>
+                    <select id="experience" required>
+                        <option value="">Select Experience</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="message">Additional Information</label>
+                <textarea id="message"
+                          placeholder="Tell us something about your team..."
+                          rows="3"></textarea>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">
+                    I confirm that the information provided is correct.
+                </label>
+            </div>
+            <button type="submit">Register Now →</button>
+            <button type="reset" class="reset-btn">
+                Reset Form
+            </button>
+            <p id="successMessage" role="status"></p>
+        </form>
+        <footer>
+            <p>🏐 Play Together. Win Together.</p>
+            <p>© 2026 Volleyball Tournament</p>
+        </footer>
+    </div>
+    <script>
+      const form = document.getElementById("registrationForm");
+      const successMessage = document.getElementById("successMessage");
+      form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const team = document.getElementById("team").value.trim();
+      const position = document.getElementById("position").value;
+      successMessage.textContent =
+        `Registration successful! Welcome ${name}. ` +
+        `Team: ${team}. Position: ${position}.`;
+      form.reset();
+});
+form.addEventListener("reset", function () {
+    successMessage.textContent = "";
+});
+  </script>
+</body>
+</html>
+
+

@@ -121,7 +121,14 @@ button:hover {
     font-weight: bold;
     padding: 0 20px 25px;
 }
-
+footer {
+    background: #092e20;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    line-height: 1.8;
+}
 /* Mobile Responsive */
 
 @media (max-width: 650px) {
@@ -197,41 +204,25 @@ button:hover {
       </ul>
     </nav>
   </header>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cricket Player Registration</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
 <body>
-
 <div class="container2">
-
     <div class="form-header">
         <h1>🏏 Cricket Player Registration</h1>
         <p>Register yourself for the cricket team selection</p>
     </div>
-
     <form id="cricketForm">
-
         <!-- Personal Details -->
         <h2 class="h">Personal Details</h2>
-
         <div class="row">
             <div class="input-group">
                 <label>Player Name</label>
                 <input type="text" id="name" placeholder="Enter your name" required>
             </div>
-
             <div class="input-group">
                 <label>Date of Birth</label>
                 <input type="date" id="dob" required>
             </div>
         </div>
-
         <div class="row">
             <div class="input-group">
                 <label>Mobile Number</label>
@@ -340,40 +331,32 @@ button:hover {
             </div>
 
         </div>
-
-
         <!-- Skills -->
         <h2>Additional Skills</h2>
-
         <div class="checkbox-group">
-
             <label>
                 <input type="checkbox" value="Batting">
                 Batting
             </label>
-
             <label>
                 <input type="checkbox" value="Bowling">
                 Bowling
             </label>
-
             <label>
                 <input type="checkbox" value="Fielding">
                 Fielding
             </label>
-
             <label>
                 <input type="checkbox" value="Wicket Keeping">
                 Wicket Keeping
             </label>
-
         </div>
-
-
         <button type="submit">Register Player 🏏</button>
-
     </form>
-
+    <footer>
+        <p>🏏 One Team. One Dream. One Champion.</p>
+        <p>© 2026 Cricket League</p>
+    </footer>
     <div id="successMessage"></div>
 
 </div>

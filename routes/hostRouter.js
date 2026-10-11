@@ -17,6 +17,13 @@ hostRouter.get("/cricket", (req,res) => {
 hostRouter.get("/badminton", (req,res) => {
   res.render('badminton',{pageTitle: 'badminton'});
 });
+hostRouter.get("/volleyball", (req,res) => {
+  res.render('volleyball',{pageTitle: 'volleyball'});
+});
+hostRouter.get("/chess", (req,res) => {
+  res.render('chess',{pageTitle: 'chess'});
+});
+
 
 
 hostRouter.get("/host/syllabus", (req,res,next) => {

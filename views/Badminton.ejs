@@ -8,34 +8,28 @@
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
-
 .form-header {
     background: linear-gradient(135deg, #0b6623, #168b3a);
     color: white;
     text-align: center;
     padding: 35px 20px;
 }
-
 .form-header h1 {
     font-size: 32px;
     margin-bottom: 10px;
 }
-
 .form-header p {
     font-size: 16px;
 }
-
 form {
     padding: 30px;
 }
-
 .h {
     font-size: 21px;
     color: #126b2f;
     padding-bottom: 8px;
     border-bottom: 2px solid #e5e5e5;
 }
-
 .row {
     display: flex;
     gap: 20px;
@@ -45,14 +39,12 @@ form {
     flex: 1;
     margin-bottom: 20px;
 }
-
 .input-group label {
     display: block;
     font-weight: bold;
     margin-bottom: 8px;
     color: #333;
 }
-
 input,
 select,
 textarea {
@@ -64,25 +56,21 @@ textarea {
     outline: none;
     transition: 0.3s;
 }
-
 input:focus,
 select:focus,
 textarea:focus {
     border-color: #168b3a;
     box-shadow: 0 0 5px rgba(22,139,58,0.25);
 }
-
 textarea {
     resize: vertical;
 }
-
 .radio-group,
 .checkbox-group {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
-
 .radio-group label,
 .checkbox-group label {
     display: flex;
@@ -90,12 +78,10 @@ textarea {
     gap: 7px;
     cursor: pointer;
 }
-
 .radio-group input,
 .checkbox-group input {
     width: auto;
 }
-
 button {
     width: 100%;
     padding: 15px;
@@ -109,40 +95,31 @@ button {
     cursor: pointer;
     transition: 0.3s;
 }
-
 button:hover {
     background: #0b6623;
     transform: translateY(-2px);
 }
-
 #successMessage {
     text-align: center;
     color: #168b3a;
     font-weight: bold;
     padding: 0 20px 25px;
 }
-
 /* Mobile Responsive */
-
 @media (max-width: 650px) {
-
     body {
         padding: 15px;
     }
-
     .form-header h1 {
         font-size: 25px;
     }
-
     form {
         padding: 20px;
     }
-
     .row {
         flex-direction: column;
         gap: 0;
     }
-
     .radio-group,
     .checkbox-group {
         flex-direction: column;
@@ -197,41 +174,24 @@ button:hover {
       </ul>
     </nav>
   </header>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Badminton Player Registration</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
 <div class="container2">
-
     <div class="form-header">
         <h1>Badminton Player Registration</h1>
         <p>Register yourself for the badminton team selection</p>
     </div>
-
     <form id="cricketForm">
-
         <!-- Personal Details -->
         <h2 class="h">Personal Details</h2>
-
         <div class="row">
             <div class="input-group">
                 <label>Player Name</label>
                 <input type="text" id="name" placeholder="Enter your name" required>
             </div>
-
             <div class="input-group">
                 <label>Date of Birth</label>
                 <input type="date" id="dob" required>
             </div>
         </div>
-
         <div class="row">
             <div class="input-group">
                 <label>Mobile Number</label>
@@ -239,67 +199,52 @@ button:hover {
                        placeholder="Enter mobile number"
                        pattern="[0-9]{10}" required>
             </div>
-
             <div class="input-group">
                 <label>Email</label>
                 <input type="email" id="email"
                        placeholder="Enter email" required>
             </div>
         </div>
-
         <div class="input-group">
             <label>Address</label>
             <textarea id="address"
                       placeholder="Enter your address"
                       rows="3" required></textarea>
         </div>
-
-
         <!-- Cricket Details -->
         <h2>Badminton Details</h2>
-
         <div class="input-group">
             <label>Playing Role</label>
-
             <div class="radio-group">
                 <label>
                     <input type="radio" name="role" value="Smaser" required>
                     Samser
                 </label>
-
                 <label>
                     <input type="radio" name="role" value="Defencer">
                     Defencer
                 </label>
-
                 <label>
                     <input type="radio" name="role" value="All-Rounder">
                     All-Rounder
                 </label>
-
                 <label>
                     <input type="radio" name="role" value="Net">
                     Net
                 </label>
             </div>
         </div>
-
-
         <div class="row">
-
             <div class="input-group">
                 <label>Baddminton Style</label>
-
                 <select id="batting" required>
                     <option value="">Select badminton style</option>
                     <option>Right Hand</option>
                     <option>Left Hand</option>
                 </select>
             </div>
-
             <div class="input-group">
                 <label>Badminton Style</label>
-
                 <select id="bowling" required>
                     <option value="">Select Smasher style</option>
                     <option>Right Arm Fast</option>
@@ -311,15 +256,10 @@ button:hover {
                     <option>None</option>
                 </select>
             </div>
-
         </div>
-
-
         <div class="row">
-
             <div class="input-group">
                 <label>Playing Experience</label>
-
                 <select id="experience" required>
                     <option value="">Select experience</option>
                     <option>Beginner</option>
@@ -328,7 +268,6 @@ button:hover {
                     <option>5+ Years</option>
                 </select>
             </div>
-
             <div class="input-group">
                 <label>Jersey Number</label>
                 <input type="number"
@@ -338,64 +277,43 @@ button:hover {
                        max="99"
                        required>
             </div>
-
         </div>
-
-
         <!-- Skills -->
         <h2>Additional Skills</h2>
-
         <div class="checkbox-group">
-
             <label>
                 <input type="checkbox" value="Shasher">
                 Smasher
             </label>
-
             <label>
                 <input type="checkbox" value="Defender">
                 Defender
             </label>
-
             <label>
                 <input type="checkbox" value="All-Rounder">
                 All-Rounder
             </label>
-
             <label>
                 <input type="checkbox" value="Net">
                 Net
             </label>
-
         </div>
-
-
         <button type="submit">Register Player</button>
-
     </form>
-
     <div id="successMessage"></div>
-
 </div>
-
 <script>
   const form = document.getElementById("cricketForm");
   const successMessage = document.getElementById("successMessage");
-
   form.addEventListener("submit", function(event) {
-
     event.preventDefault();
-
     const name = document.getElementById("name").value;
-
     successMessage.innerHTML =
-        `🏏 Registration Successful!<br>
+        ` Registration Successful!<br>
          Welcome ${name} to the cricket team selection.`;
-
     form.reset();
 });
 </script>
-
 </body>
 </html>
 </body>
