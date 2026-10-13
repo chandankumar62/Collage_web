@@ -26,6 +26,15 @@ hostRouter.get("/chess", (req,res) => {
 hostRouter.get("/tug-of-war", (req,res) => {
   res.render('tug-of-war',{pageTitle: 'tug-of-war'});
 });
+hostRouter.get("/carrom", (req,res) => {
+  res.render('carrom',{pageTitle: 'carrom'});
+});
+hostRouter.get("/kabbadi", (req,res) => {
+  res.render('kabbadi',{pageTitle: 'kabbadi'});
+});
+hostRouter.get("/pubge", (req,res) => {
+  res.render('pubg',{pageTitle: 'pubg'});
+});
 
 
 

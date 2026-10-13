@@ -1,0 +1,349 @@
+<%- include('partial/head') %>
+<style>
+.container2 {
+    max-width: 760px;
+    margin: auto;
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+.header2 {
+    text-align: center;
+    padding: 35px 20px;
+    color: #fff;
+    background: linear-gradient(135deg, #14532d, #22a05a);
+}
+.icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+.header h1 {
+    font-size: 34px;
+    letter-spacing: 3px;
+}
+.header h2 {
+    margin-top: 10px;
+    color: #fde68a;
+    font-size: 22px;
+}
+.header p {
+    margin-top: 12px;
+    font-size: 14px;
+}
+form {
+    padding: 30px;
+}
+form h3 {
+    color: #166534;
+    margin: 12px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f59e0b;
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+label {
+    color: #263238;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    background: #fff;
+    transition: 0.3s;
+}
+input:focus,
+select:focus {
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12);
+}
+.info {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: -8px 0 18px;
+}
+.player-field {
+    margin-bottom: 15px;
+}
+.player-field label {
+    display: block;
+    margin-bottom: 8px;
+}
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 15px 0 25px;
+}
+.checkbox input {
+    width: auto;
+    margin-top: 3px;
+}
+.checkbox label {
+    font-weight: normal;
+    line-height: 1.5;
+}
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #15803d;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background: #166534;
+    transform: translateY(-2px);
+}
+.reset-btn {
+    margin-top: 12px;
+    background: #e2e8f0;
+    color: #263238;
+}
+.reset-btn:hover {
+    background: #cbd5e1;
+}
+#successMessage {
+    color: #15803d;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.7;
+    margin-top: 20px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #14532d;
+    color: white;
+    font-size: 13px;
+    line-height: 1.8;
+}
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    form {
+        padding: 22px;
+    }
+    .header h1 {
+        font-size: 27px;
+    }
+    .header h2 {
+        font-size: 19px;
+    }
+}
+</style>
+</head>
+<body>
+  <header class="bg-red-500 text-white p-4 shadow-md">
+    <nav class="container mx-auto flex justify-between items-center">
+      <ul class="flex space-x-4"> 
+        <li>
+          <a href="/sports-home" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Home</a>
+        </li>
+        <li>
+          <a href="/cricket"><h2 class="Logo">Cricket</h2></a>
+        </li>
+        <li>
+          <a href="/badminton" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Badminton</a>
+        </li>
+        <li>
+          <a href="/volleyball" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Volleyball</a>
+        </li>
+        <li>
+          <a href="/chess" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Chess</a>
+        </li>
+        <li>
+          <a href="/tug-of-war" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Tug of War</a>
+        </li>
+        <li>
+          <a href="/carrom" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Carrom</a>
+        </li>
+        <li>
+          <a href="/kabbadi" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Kabbadi</a>
+        </li>
+        <li>
+          <a href="/pubge" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Pubg</a>
+        </li>
+        <li>
+          <a href="/free-fire" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Free fire</a>
+        </li>
+        <li>
+          <a href="/long-jump" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Long jump</a>
+        </li>
+        <li>
+          <a href="/high-jump" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">High jump</a>
+        </li>
+        <li>
+          <a href="/high-jump" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Jablin Throw</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+<div class="container2">
+    <header class="header2">
+        <div class="icon">🏆</div>
+        <h1>TUG OF WAR</h1>
+        <h2>TOURNAMENT 2026</h2>
+        <p>Strength • Teamwork • Victory</p>
+    </header>
+    <form id="tugForm">
+        <h3>👤 Team Captain Details</h3>
+        <div class="input-group">
+            <label for="captain">Captain's Full Name *</label>
+            <input type="text" id="captain"
+                   placeholder="Enter captain's name" required>
+        </div>
+        <div class="form-row">
+            <div class="input-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email"
+                       placeholder="Enter email" required>
+            </div>
+            <div class="input-group">
+                <label for="phone">Mobile Number *</label>
+                <input type="tel" id="phone"
+                       placeholder="10-digit number"
+                       pattern="[0-9]{10}" required>
+            </div>
+        </div>
+        <h3>🏆 Team Information</h3>
+        <div class="form-row">
+            <div class="input-group">
+                <label for="team">Team Name *</label>
+                <input type="text" id="team"
+                       placeholder="Enter team name" required>
+            </div>
+            <div class="input-group">
+                <label for="organization">School / College / Club</label>
+                <input type="text" id="organization"
+                       placeholder="Enter organization">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-group">
+                <label for="category">Team Category *</label>
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Men">Men</option>
+                    <option value="Women">Women</option>
+                    <option value="Mixed">Mixed Team</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="players">Number of Players *</label>
+                <select id="players" required>
+                    <option value="">Select Team Size</option>
+                    <option value="4">4 Players</option>
+                    <option value="6">6 Players</option>
+                    <option value="8">8 Players</option>
+                    <option value="10">10 Players</option>
+                </select>
+            </div>
+        </div>
+        <div class="input-group">
+            <label for="ageGroup">Age Category *</label>
+            <select id="ageGroup" required>
+                <option value="">Select Age Category</option>
+                <option value="Under 14">Under 14</option>
+                <option value="Under 16">Under 16</option>
+                <option value="Under 18">Under 18</option>
+                <option value="Open">Open Category</option>
+            </select>
+        </div>
+        <h3>💪 Team Members</h3>
+        <p class="info">
+            Enter the names of your team members below.
+            The number of fields will depend on your selected team size.
+        </p>
+        <div id="playersContainer"></div>
+        <h3>📋 Declaration</h3>
+        <div class="checkbox">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">
+                I confirm that the information is correct and
+                our team will follow the tournament rules.
+            </label>
+        </div>
+        <button type="submit">Register Team →</button>
+        <button type="reset" class="reset-btn">
+            Reset Form
+        </button>
+        <div id="successMessage" role="status"></div>
+    </form>
+    <footer>
+        <p>💪 Together We Pull, Together We Win!</p>
+        <p>© 2026 Tug of War Tournament</p>
+    </footer>
+</div>
+<script>
+const form = document.getElementById("tugForm");
+const playersSelect = document.getElementById("players");
+const playersContainer = document.getElementById("playersContainer");
+const successMessage = document.getElementById("successMessage");
+playersSelect.addEventListener("change", function () {
+    const count = Number(playersSelect.value);
+    playersContainer.replaceChildren();
+    for (let i = 1; i <= count; i++) {
+        const wrapper = document.createElement("div");
+        wrapper.className = "player-field";
+        const label = document.createElement("label");
+        label.htmlFor = `player${i}`;
+        label.textContent = `Player ${i} Name *`;
+        const input = document.createElement("input");
+        input.type = "text";
+        input.id = `player${i}`;
+        input.name = `player${i}`;
+        input.placeholder = `Enter player ${i} name`;
+        input.required = true;
+        wrapper.append(label, input);
+        playersContainer.appendChild(wrapper);
+    }
+});
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const captain = document.getElementById("captain").value.trim();
+    const team = document.getElementById("team").value.trim();
+    const category = document.getElementById("category").value;
+    const count = Number(playersSelect.value);
+    const playerNames = [];
+    for (let i = 1; i <= count; i++) {
+        const playerName = document.getElementById(`player${i}`)
+            .value.trim();
+        playerNames.push(playerName);
+    }
+    successMessage.textContent =
+        `Registration successful! Team: ${team}. ` +
+        `Captain: ${captain}. Category: ${category}. ` +
+        `Players registered: ${playerNames.length}.`;
+    form.reset();
+    playersContainer.replaceChildren();
+});
+form.addEventListener("reset", function () {
+    successMessage.textContent = "";
+    playersContainer.replaceChildren();
+});
+</script>
+</body>
+</html>
