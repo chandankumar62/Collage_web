@@ -23,6 +23,9 @@ hostRouter.get("/volleyball", (req,res) => {
 hostRouter.get("/chess", (req,res) => {
   res.render('chess',{pageTitle: 'chess'});
 });
+hostRouter.get("/tug-of-war", (req,res) => {
+  res.render('tug-of-war',{pageTitle: 'tug-of-war'});
+});
 
 
 
