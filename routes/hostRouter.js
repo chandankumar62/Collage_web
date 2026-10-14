@@ -32,8 +32,14 @@ hostRouter.get("/carrom", (req,res) => {
 hostRouter.get("/kabbadi", (req,res) => {
   res.render('kabbadi',{pageTitle: 'kabbadi'});
 });
-hostRouter.get("/pubge", (req,res) => {
+hostRouter.get("/pubg", (req,res) => {
   res.render('pubg',{pageTitle: 'pubg'});
+});
+hostRouter.get("/free-fire", (req,res) => {
+  res.render('free-fire',{pageTitle: 'free-fire'});
+});
+hostRouter.get("/long-jump", (req,res) => {
+  res.render('long-jump',{pageTitle: 'long-jump'});
 });
 
 
