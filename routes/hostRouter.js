@@ -41,7 +41,9 @@ hostRouter.get("/free-fire", (req,res) => {
 hostRouter.get("/long-jump", (req,res) => {
   res.render('long-jump',{pageTitle: 'long-jump'});
 });
-
+hostRouter.get("/high-jump", (req,res) => {
+  res.render('high-jump',{pageTitle: 'high-jump'});
+});
 
 
 hostRouter.get("/host/syllabus", (req,res,next) => {

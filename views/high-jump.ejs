@@ -1,0 +1,368 @@
+<%- include('partial/head') %>
+<style>
+.container2 {
+    max-width: 760px;
+    margin: auto;
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.header2 {
+    text-align: center;
+    padding: 35px 20px;
+    color: #fff;
+    background: linear-gradient(135deg, #7c2d12, #ea580c);
+}
+
+.game-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.header2 h1 {
+    font-size: 32px;
+    letter-spacing: 3px;
+}
+
+.header2 h2 {
+    margin-top: 10px;
+    color: #fde68a;
+    font-size: 22px;
+}
+
+.header2 p {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+form {
+    padding: 30px;
+}
+
+form h3 {
+    color: #9a3412;
+    margin: 12px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f97316;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    color: #292524;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d6d3d1;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #ea580c;
+    box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.12);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 15px 0 25px;
+}
+
+.checkbox input {
+    width: auto;
+    margin-top: 3px;
+}
+
+.checkbox label {
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #ea580c;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #9a3412;
+    transform: translateY(-2px);
+}
+
+.reset-btn {
+    margin-top: 12px;
+    background: #e7e5e4;
+    color: #292524;
+}
+
+.reset-btn:hover {
+    background: #d6d3d1;
+}
+
+#successMessage {
+    color: #15803d;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.7;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #101820;
+    color: white;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    form {
+        padding: 22px;
+    }
+
+    .header2 h1 {
+        font-size: 25px;
+    }
+
+    .header2 h2 {
+        font-size: 19px;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<header class="bg-red-500 text-white p-4 shadow-md">
+    <nav class="container mx-auto flex justify-between items-center">
+        <ul class="flex space-x-4">
+            <li>
+                <a href="/sports-home"
+                   class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">
+                    Home
+                </a>
+            </li>
+            <li><a href="/cricket">Cricket</a></li>
+            <li><a href="/badminton">Badminton</a></li>
+            <li><a href="/volleyball">Volleyball</a></li>
+            <li><a href="/chess">Chess</a></li>
+            <li><a href="/tug-of-war">Tug of War</a></li>
+            <li><a href="/carrom">Carrom</a></li>
+            <li><a href="/kabbadi">Kabbadi</a></li>
+            <li><a href="/pubg">Pubg</a></li>
+            <li><a href="/free-fire">Free Fire</a></li>
+            <li><a href="/long-jump">Long Jump</a></li>
+            <li><a href="/high-jump">High Jump</a></li>
+            <li><a href="/javelin-throw">Javelin Throw</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container2">
+
+    <header class="header2">
+        <div class="game-icon">🏃</div>
+        <h1>ATHLETICS ARENA</h1>
+        <h2>HIGH JUMP COMPETITION 2026</h2>
+        <p>Rise Higher. Compete Stronger. Become a Champion.</p>
+    </header>
+
+    <form id="registrationForm">
+
+        <h3>👤 Participant Information</h3>
+
+        <div class="form-row">
+            <div class="input-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Enter your full name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="input-group">
+                <label for="phone">Mobile Number *</label>
+                <input type="tel" id="phone" name="phone"
+                       placeholder="10-digit mobile number"
+                       pattern="[0-9]{10}" maxlength="10" required>
+            </div>
+
+            <div class="input-group">
+                <label for="age">Age *</label>
+                <input type="number" id="age" name="age"
+                       min="13" max="100"
+                       placeholder="Enter your age" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="input-group">
+                <label for="gender">Gender *</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Boys">Boys</option>
+                    <option value="Girls">Girls</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="category">Competition Category *</label>
+                <select id="category" name="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Under 18">Under 18</option>
+                    <option value="Open">Open Category</option>
+                </select>
+            </div>
+        </div>
+
+        <h3>🏫 College / Institution Details</h3>
+
+        <div class="form-row">
+            <div class="input-group">
+                <label for="college">College / University Name *</label>
+                <input type="text" id="college" name="college"
+                       placeholder="Enter college name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="regNumber">Registration / Roll Number *</label>
+                <input type="text" id="regNumber" name="regNumber"
+                       placeholder="Enter roll number" required>
+            </div>
+        </div>
+
+        <h3>🏆 High Jump Competition Details</h3>
+
+        <div class="form-row">
+            <div class="input-group">
+                <label for="level">Competition Level *</label>
+                <select id="level" name="level" required>
+                    <option value="">Select Level</option>
+                    <option value="College">College</option>
+                    <option value="District">District</option>
+                    <option value="State">State</option>
+                    <option value="Open">Open Competition</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="bestJump">Personal Best Height (metres)</label>
+                <input type="number" id="bestJump" name="bestJump"
+                       min="0" max="3" step="0.01"
+                       placeholder="e.g. 1.65 (optional)">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="experience">Competition Experience *</label>
+            <select id="experience" name="experience" required>
+                <option value="">Select Experience</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Experienced">Experienced</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="message">Additional Information</label>
+            <textarea id="message" name="message" rows="3"
+                      placeholder="Any additional information..."></textarea>
+        </div>
+
+        <div class="checkbox">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">
+                I confirm that the information provided is correct
+                and agree to follow the competition rules.
+            </label>
+        </div>
+
+        <button type="submit">Register for High Jump →</button>
+        <button type="reset" class="reset-btn">Reset Form</button>
+
+        <p id="successMessage" role="status" aria-live="polite"></p>
+
+    </form>
+
+    <footer>
+        <p>🥇 Aim High. Jump Higher. Give Your Best.</p>
+        <p>© 2026 Athletics Arena</p>
+    </footer>
+
+</div>
+
+<script>
+const form = document.getElementById("registrationForm");
+const successMessage = document.getElementById("successMessage");
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const category = document.getElementById("category").value;
+    const level = document.getElementById("level").value;
+
+    successMessage.textContent =
+        `Registration successful! Best of luck, ${name}. ` +
+        `Category: ${category} | Competition: ${level}`;
+
+    form.reset();
+});
+
+form.addEventListener("reset", function () {
+    successMessage.textContent = "";
+});
+</script>
+
+</body>
+</html>
