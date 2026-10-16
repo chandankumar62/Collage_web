@@ -44,6 +44,13 @@ hostRouter.get("/long-jump", (req,res) => {
 hostRouter.get("/high-jump", (req,res) => {
   res.render('high-jump',{pageTitle: 'high-jump'});
 });
+hostRouter.get("/dancing", (req,res) => {
+  res.render('dancing',{pageTitle: 'dancing'});
+});
+
+
+
+
 
 
 hostRouter.get("/host/syllabus", (req,res,next) => {

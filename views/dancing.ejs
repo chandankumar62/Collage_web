@@ -1,0 +1,395 @@
+<%- include('partial/head') %>
+<style>
+.container2 {
+    max-width: 760px;
+    margin: 35px auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.header2 {
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.header2 h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+}
+
+.header2 p {
+    margin: 0;
+}
+
+.nav2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px;
+    background: #fff3e0;
+}
+
+.nav2 a {
+    text-decoration: none;
+    color: #e65100;
+    font-weight: bold;
+}
+
+.nav2 a:hover {
+    color: #bf360c;
+    text-decoration: underline;
+}
+
+.form-content {
+    padding: 25px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #ff9800;
+    box-shadow: 0 0 5px rgba(255,152,0,0.3);
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+
+.checkbox-group {
+    margin: 15px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.checkbox-group input {
+    margin-top: 4px;
+}
+
+.checkbox-group label {
+    line-height: 1.5;
+}
+
+.btn-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-submit {
+    background: #ff9800;
+    color: white;
+}
+
+.btn-submit:hover {
+    background: #e68900;
+}
+
+.btn-reset {
+    background: #eee;
+    color: #333;
+}
+
+.btn-reset:hover {
+    background: #ddd;
+}
+
+.success-message {
+    display: none;
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+    border-radius: 7px;
+    padding: 15px;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.footer2 {
+    text-align: center;
+    padding: 15px;
+    background: #fff3e0;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    .container2 {
+        margin: 15px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-content {
+        padding: 18px;
+    }
+
+    .header2 h1 {
+        font-size: 23px;
+    }
+}
+</style>
+<body>
+  <header class="bg-red-500 text-white p-4 shadow-md">
+    <nav class="container mx-auto flex justify-between items-center">
+      <ul class="flex space-x-4">
+        
+        <li>
+          <a href="/form-home" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Home</a>
+        </li>
+        <li>
+          <a href="/dancing"><h2 class="Logo">Dancing</h2></a>
+        </li>
+        <li>
+          <a href="/singing" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Singing</a>
+        </li>
+        <li>
+          <a href="/shayari" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Shayari</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+<div class="container2">
+
+    <div class="header2">
+        <h1>Dancing Registration</h1>
+        <p>Register Now for the Dance Competition</p>
+    </div>
+    <div class="form-content">
+        <form id="dancingForm">
+
+            <h2>Participant Information</h2>
+
+            <div class="form-row">
+
+                <div class="input-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name"
+                           placeholder="Enter your full name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Mobile Number *</label>
+                    <input type="tel" id="phone" name="phone"
+                           placeholder="10-digit mobile number"
+                           pattern="[0-9]{10}" maxlength="10" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="age">Age *</label>
+                    <input type="number" id="age" name="age"
+                           min="5" max="100" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="gender">Gender *</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                        <option value="Prefer not to say">Prefer not to say</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="college">College / Institution *</label>
+                    <input type="text" id="college" name="college"
+                           placeholder="Enter college name" required>
+                </div>
+
+            </div>
+
+            <h2>Dance Competition Details</h2>
+
+            <div class="form-row">
+
+                <div class="input-group">
+                    <label for="danceStyle">Dance Style *</label>
+                    <select id="danceStyle" name="danceStyle" required>
+                        <option value="">Select Dance Style</option>
+                        <option value="Classical">Classical</option>
+                        <option value="Bollywood">Bollywood</option>
+                        <option value="Hip Hop">Hip Hop</option>
+                        <option value="Contemporary">Contemporary</option>
+                        <option value="Folk Dance">Folk Dance</option>
+                        <option value="Freestyle">Freestyle</option>
+                        <option value="Western">Western</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="performanceType">Performance Type *</label>
+                    <select id="performanceType" name="performanceType" required>
+                        <option value="">Select Performance</option>
+                        <option value="Solo">Solo</option>
+                        <option value="Duo">Duo</option>
+                        <option value="Group">Group</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="level">Competition Level *</label>
+                    <select id="level" name="level" required>
+                        <option value="">Select Level</option>
+                        <option value="College">College</option>
+                        <option value="District">District</option>
+                        <option value="State">State</option>
+                        <option value="National">National</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="experience">Dance Experience *</label>
+                    <select id="experience" name="experience" required>
+                        <option value="">Select Experience</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="1-3 Years">1–3 Years</option>
+                        <option value="3-5 Years">3–5 Years</option>
+                        <option value="5+ Years">5+ Years</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="teamName">Team Name (if applicable)</label>
+                    <input type="text" id="teamName" name="teamName"
+                           placeholder="Enter team name">
+                </div>
+
+                <div class="input-group">
+                    <label for="members">Number of Performers</label>
+                    <input type="number" id="members" name="members"
+                           min="1" max="50" value="1" required>
+                </div>
+
+            </div>
+
+            <div class="input-group">
+                <label for="song">Song / Performance Name</label>
+                <input type="text" id="song" name="song"
+                       placeholder="Enter song or performance name">
+            </div>
+
+            <div class="input-group">
+                <label for="info">Additional Information</label>
+                <textarea id="info" name="info" rows="4"
+                          placeholder="Tell us about your performance..."></textarea>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">
+                    I confirm that the information provided is correct
+                    and agree to follow the competition rules. *
+                </label>
+            </div>
+
+            <div class="btn-group">
+                <button type="submit" class="btn btn-submit">
+                    Register Now
+                </button>
+
+                <button type="reset" class="btn btn-reset">
+                    Reset Form
+                </button>
+            </div>
+
+            <div id="successMessage" class="success-message"
+                 role="status" aria-live="polite"></div>
+
+        </form>
+
+    </div>
+
+    <div class="footer2">
+        <p>© 2026 Sports Registration System | Dancing Competition</p>
+    </div>
+
+</div>
+
+<script>
+const dancingForm = document.getElementById("dancingForm");
+const successMessage = document.getElementById("successMessage");
+
+dancingForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const danceStyle = document.getElementById("danceStyle").value;
+    const performanceType =
+        document.getElementById("performanceType").value;
+
+    successMessage.textContent =
+        "Registration successful! Welcome, " + name +
+        ". Dance Style: " + danceStyle +
+        ". Performance Type: " + performanceType + ".";
+
+    successMessage.style.display = "block";
+
+    successMessage.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+    });
+});
+
+dancingForm.addEventListener("reset", function() {
+    successMessage.style.display = "none";
+    successMessage.textContent = "";
+});
+</script>
+</body>
+</html>
