@@ -47,6 +47,13 @@ hostRouter.get("/high-jump", (req,res) => {
 hostRouter.get("/dancing", (req,res) => {
   res.render('dancing',{pageTitle: 'dancing'});
 });
+hostRouter.get("/singing", (req,res) => {
+  res.render('singing',{pageTitle: 'singing'});
+});
+hostRouter.get("/shayari", (req,res) => {
+  res.render('shayari',{pageTitle: 'shayari'});
+});
+
 
 
 
