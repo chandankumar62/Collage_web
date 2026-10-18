@@ -54,6 +54,13 @@ hostRouter.get("/shayari", (req,res) => {
   res.render('shayari',{pageTitle: 'shayari'});
 });
 
+hostRouter.get("/host/pyqs", (req,res) => {
+  res.render('pyqs',{pageTitle: 'pyqs'});
+});
+hostRouter.get("/host/pyq.html", (req,res) => {
+  res.render('pyq',{pageTitle: 'pyq'});
+});
+
 
 
 
